@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Title-->
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="Style.css">
+    <!-- <link rel="stylesheet" href="Login.css"> -->
+     <!-- CSS File-->
+     <script defer src="Script.js"></script>
+     <!-- <script defer src="Login.js"></script> -->
+</head>
+<body>
+    <div class="navbar">
+		<a class="navlink" href="">Home</a>
+		<a  class="navlink"  href="">About</a>
+		<a class="navlink"  href="6371855092">Contact us</a>
+		<a class="navlink"  href="">Documantation</a>
+		<a class="navlink"  href="">Help</a>
+	</div>
+
+	<CENTER><h1 style="color: aqua;">Student Result Management System</h1></CENTER>
+    <!--Table-->
+    <table>
+        <!--Row-1-->
+        <tr>
+            <!--Column-1-->
+            <td>
+                <!--Form-->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                	<h2>Student Form</h2>
+                  <!--div-1-->
+                    <div>
+                        <label>Full Name</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="userNamevalidationError">This field is required</label>
+                        <!--Input User Name-->
+                        <input type="text" name="userName" id="userName" >
+                    </div>
+                    <!--div-2-->
+                    <div>
+                        <label>Rollno</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="rollNovalidationError" >This field is required</label>
+                        <!--Input Roll No-->
+                        <input type="text" name="rollNo" id="rollNo">
+                    </div>
+                    <!--div-3-->
+                    <div>
+                        <label>Course</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="CoursevalidationError">This field is required</label>
+                       <!--Input Student Class-->
+                        <input type="text" name="Course" id="Course">
+                    </div>
+                    <!--div-4-->
+                    <div>
+                        <label>Total Subject</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="tsubvalidationError">This field is required</label>
+                        <!--Input Total Subject-->
+                        <input type="number" name="tsub" id="tsub">
+                    </div>
+                    <!--div-5-->
+                    <div>
+                        <label>Attendance</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="AttendancevalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="text" name="Attendance" id="Attendance">
+                    </div>
+                    <!--div-5-->
+                    <div>
+                        <label>Marks</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="MarksvalidationError">This field is required</label>
+                        <!--Input Marks-->
+                        <input type="number" name="Marks" id="Marks">
+                    </div>
+                    <!--div-6-->
+                    <div class="form-action-buttons">
+                        <!--Input Button-->
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <!--Column-2-->
+            <td>
+                <!--Nested Table-->
+                <table class="list" id="stdlist";>
+                    <!--Table Head-->
+                    <thead>
+                        <!--Row-2-->
+                        <tr>
+                            <th>Full Name</th>
+                            <th> Roll no</th>
+                            <th>Course</th>
+                            <th>Total Subject</th>
+                            <th>Attendance</th>
+                            <th>Marks</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <!--Table Body-->
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table id="table" border="1">
+        <tr>
+            <th>Full Name</th>
+            <th>Roll no</th>
+            <th>course</th>
+            <th>total subject</th>
+            <th>Attendance</th>
+            <th>Marks</th>
+        </tr>
+        <tr id="table2">
+            <td>Sambit Sohan Sahoo</td>
+            <td>CIT20039</td>
+            <td>B.Tech</td>
+            <td>5</td>
+            <td>78%</td>
+            <td>473</td>
+        </tr>
+        <tr>
+            <td>Kasturi Mishra</td>
+            <td>COM20045</td>
+            <td>B.com</td>
+            <td>5</td>
+            <td>85%</td>
+            <td>443</td>
+        </tr>
+        <tr>
+            <td>Sumanshree Mohapatra</td>
+            <td>CIT20058</td>
+            <td>B.Tech</td>
+            <td>5</td>
+            <td>83%</td>
+            <td>383</td>
+        </tr>
+    </table>
+    <span id="val">
+    <h3 align="center">Max Attendance 85%</h3>
+</span>
+</body>
